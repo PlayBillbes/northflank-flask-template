@@ -1,0 +1,72 @@
+:root {
+    --back-color: #275457;
+}
+@font-face {
+    font-family: 'Oswald';
+    src: url('/ruta/a/oswald.woff2') format('woff2'),
+         url('/ruta/a/oswald.woff') format('woff');
+    /* Agrega más formatos si los tienes */
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+.content_logo {
+    display: flex;
+    margin-left: 20%;
+    margin-bottom: 2%;
+    width: 50%;
+    height: 30%;
+    text-align: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 20px;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to top, white, var(--back-color), var(--back-color), white) 1;
+    border-radius: 10px;
+
+    color: white
+}
+h1 {
+    color: white;
+    font-family: "Oswald", sans-serif;
+    font-weight: 100;
+    display: block;
+    width: 100%;
+}
+.nav {
+    display: block;
+    width: 100%;
+    background-color: var(--back-color);
+    margin: 0;
+    padding: 1%;
+}
+ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+ul li {
+    color: white;
+    display: inline-block;
+    margin-left: 2%;
+    width: 15%;
+    border-left: solid 6px var(--back-color);
+    border-right: solid 6px var(--back-color);
+    border-radius: 20px;
+}
+ul li:hover {
+    background-color: rgba(255, 255, 255, 0.531);
+    color: black;
+    border-left: solid 6px white;
+    border-right: solid 6px white;
+    border-radius: 20px;
+
+    transition-duration: 1s;
+}
