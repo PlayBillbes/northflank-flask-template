@@ -1,18 +1,38 @@
-<!doctype html>
-
-<html lang="en-us">
-
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/template.css') }}">
-    <title>Home</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAMIE</title>
+    <!-- Fuente -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Oswald&display=swap">
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="../statics_index/css/stylesheet.css">
+    <link rel="stylesheet" href="../statics_index/css/nav.css">
 </head>
-
 <body>
-    <h1>Home Page</h1>
-    <p>Hello World from Flask! Get started by learning more <a href="https://flask.palletsprojects.com/en/1.1.x/">here</a>.</p>
-    <p>API endpoint available at <a href="/api/data">/api</a>.</p>
-</body>
 
+    <div class="container">
+        <div class="logo_container">
+            <h1>SAMIE</h1>
+            <h5>Sistema de Administración Monitoreo e Inteligencia Empresarial</h5>
+        </div>
+    </div>
+    <div class="nav">
+        <nav>
+            <ul>
+                <a href="/"><li>Home</li></a>
+                <a href="/quienes_somos"><li>¿Quienes Somos?</li></a>
+                <a href="#"><li>¿Nuestros Servicios?</li></a>
+                <a href="#"><li>Casos De Éxito</li></a>
+                <a href="#"><li>Provar Nuestros Servicios</li></a>
+            </ul>
+        </nav>
+    </div>
+
+    {% block content %}
+
+    {% endblock %}
+    
+</body>
 </html>

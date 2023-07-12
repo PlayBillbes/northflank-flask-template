@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from modules.index.index import index
 from modules.evaluaciones_desempeño.e_desempeño import e_desempeño
 from modules.rotacion_personal.r_personal import r_personal
@@ -8,15 +8,37 @@ from modules.control_inventarios.inventarios import inventarios
 app = Flask(__name__)
 app.secret_key="My_secret_Key"
 
-# Blueprints
+@index.route('/')
+def home():
+    return render_template('home.html')
 
-app.register_blueprint(index)
-app.register_blueprint(e_desempeño)
-app.register_blueprint(r_personal)
-app.register_blueprint(encuestas)
-app.register_blueprint(inventarios)
+@index.route('/quienes_somos')
+def quienes_somos():
+    return render_template('quienes_somos.html')
 
-# EndBlueprints
+@index.route('/nuestros_servicios')
+def nuestros_servicios():
+    return render_template('nuestros_servicios.html')
+
+@index.route('/casos_de_exito')
+def casos_de_exito():
+    return render_template('casos_de_exito.html')
+
+@index.route('/provar_nuestros_servicios')
+def provar_nuestros_servicios():
+    return render_template('provar_nuestros_servicios.html')
+
+
+
+# # Blueprints
+
+# app.register_blueprint(index)
+# app.register_blueprint(e_desempeño)
+# app.register_blueprint(r_personal)
+# app.register_blueprint(encuestas)
+# app.register_blueprint(inventarios)
+
+# # EndBlueprints
 
 @app.route("/api/<data>")
 def api(data):
