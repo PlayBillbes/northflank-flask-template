@@ -9,3 +9,4 @@ ENTRYPOINT ["python"]
 CMD ["app.py"]
 
 EXPOSE 80
+USER 10014
